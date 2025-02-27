@@ -1,10 +1,9 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 from typing import Optional
 
-class User(BaseModel):
+class Account(BaseModel):
     id: Optional[int] = None
     name: str
-    email: EmailStr
-    role: str
+    domain: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
